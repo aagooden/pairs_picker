@@ -1,0 +1,18 @@
+
+<img class="resize" src="/together.jpg">
+
+<h3>Your Pairings Are:</h3>
+
+<div>
+	<%@pairs.each do |x|%>
+		<% if x.length == 2 %>
+	 	<p><%= x[0]%> and <%= x[1] %></p>	
+		<% else %> 
+		<p><%= x[0] %> and <%= x[1] %> and <%= x[2] %></p>	
+		<% end %>
+	<% end %>
+</div>
+
+<form action="/pairs" method="get">
+	<input type="submit" value ="Do it Again!">
+</form>
